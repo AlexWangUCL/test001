@@ -1,0 +1,13 @@
+/*
+边有有向边和无向边两种，无向边用于无向图，有向边用于有向图，不可混用。
+属性设置：边的常见设置有style、color、weight、label、labelfontcolor、headlabel、taillabel、decorate等，对于有向边，还可以设置边的起点位置等（用n、e、s、w和相邻字母的组合表示位置）。和节点类似的，边属性设置时，用edge[]设置默认属性，在边之后用[]设置单独一条边的属性。
+*/
+
+digraph edge_setting {
+    edge [color = "green", decorate = "false"]  //设置边的默认属性
+    node [shape = "polygon", sides = 4, color = "blue"] 
+    a -> b [style = "dotted", color = "red", label = "a to b"]  //设置style，color，label
+    b: se -> c; w [headlabel = "end", taillabel = "start"]  //设置从b的东南方出发，从c的西方结束，设置有向的起点和重点的label
+    edge [style = "bond", decorate = true]  //设置之后的边加粗并且标签和连线之间有标注
+    {c, f} -> {d, e} [label = "multi-lines"]    //可以用这种方式同时画多条边
+}

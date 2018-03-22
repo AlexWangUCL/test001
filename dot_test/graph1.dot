@@ -1,0 +1,11 @@
+/*
+打开gvedit，新建一个.gv或者点.dot的文件并输入DOT文本
+终端直接调用dot命令处理文本并生成图片: dot -Tpng -o test.png test.dot  
+*/
+digraph g{
+    node [shape = plaintext]
+    A1 -> B1
+    A2 -> B2
+    A1 -> A2
+    B1 -> B2
+}
